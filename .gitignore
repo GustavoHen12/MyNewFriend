@@ -1,1 +1,2 @@
-./myNewFriend/.env
+.env
+/myNewFriend/myNewFriend/__pycache__/

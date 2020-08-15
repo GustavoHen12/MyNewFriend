@@ -78,8 +78,6 @@ WSGI_APPLICATION = 'myNewFriend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-print(DATABASE_USER)
-print(DATABASE_PASSWORD)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
