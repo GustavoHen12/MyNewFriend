@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>My New Friend</title>{% endblock %}
+</head>
+<body>
+  {% block sidebar %}<li><a href="{% url 'cadastroCentroAdocao' %}">Home</a></li> {% endblock %}
+  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</body>
+</html>
