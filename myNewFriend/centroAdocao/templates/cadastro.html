@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>My New Friend</title>{% endblock %}
+</head>
+<body>
+  <h2>Cadastro do centro de adoção pet</h2>
+  <form method="POST" action="novoCentroAdocao/" >{% csrf_token %}
+        <div>
+          <label for="nome">Nome: </label>
+          <input id="nome" type="text" name="nome">
+        </div>
+        <div>
+          <label for="email">Email: </label>
+          <input id="email" type="text" name="email">
+        </div>
+        <div>
+          <div>
+            <label for="cachorro">Cachorro: </label>
+            <input id="cachorro" type="checkbox" name="cachorro">
+            <label for="gato">Gato: </label>
+            <input id="gato" type="checkbox" name="gato">
+          </div>
+          <label for="quantidade">Quantos:</label>
+          <input id="quantidade" type="number" name="quantidade" min="1">
+        </div>
+       
+        <button type="submit" class="save btn btn-default">Save</button>
+  </form>
+</body>
+</html>
