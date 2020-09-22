@@ -11,3 +11,5 @@ Links que podem ser uteis futuramente
 - [estrutura 1](http://blog.dunderlabs.com/django-boilerplate-a-estrutura-de-projeto-django-que-tenho-usado.html)
 
 - [estrutura 2](https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
+
+- [bootstrap](https://dev.to/thalesbruno/django-projeto-generico-com-bootstrap-3d86)
