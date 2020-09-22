@@ -5,6 +5,13 @@
 </head>
 <body>
   {% block sidebar %}<li><a href="{% url 'cadastroCentroAdocao' %}">Cadastro</a></li> {% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  
+  <form method="GET" action="/busca" >{% csrf_token %}
+        <div>
+          <label for="busca">Busca: </label>
+          <input id="busca" type="text" name="busca">
+        </div>
+    <button type="submit" class="save btn btn-default">Buscar</button>
+  </form>
 </body>
 </html>
