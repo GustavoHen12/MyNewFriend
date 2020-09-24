@@ -1,0 +1,25 @@
+.myContainer{
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.btnWithIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 14pt;
+    cursor: pointer;
+}
+.btnWithIcon p{
+    font-weight: 500;
+    margin-left: .7em;
+    margin-bottom: 0;
+}
+.navegation{
+    float: right;
+    margin-right: 1.5em;
+}

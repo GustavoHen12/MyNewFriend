@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block title %}<title>My New Friend</title>{% endblock %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/global.css' %}">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body class = "bkgColor">
+    <header>
+        <div class = "logo">
+            <img class = "icone" src ="{% static "assets/icon.svg" %}">
+            <h1 class = "titulo primary-color">MyNewFriend</h1>
+        </div>
+    </header>  
+  {% block content %}{% endblock content %}
+</body>
+</html>

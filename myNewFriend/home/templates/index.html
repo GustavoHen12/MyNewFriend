@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% block title %}<title>My New Friend</title>{% endblock %}
-</head>
-<body>
-  {% block sidebar %}<li><a href="{% url 'cadastroCentroAdocao' %}">Cadastro</a></li> {% endblock %}
-  
-  <form method="GET" action="/busca" >{% csrf_token %}
-        <div>
-          <label for="busca">Busca: </label>
-          <input id="busca" type="text" name="busca">
-        </div>
-    <button type="submit" class="save btn btn-default">Buscar</button>
-  </form>
-</body>
-</html>
+{% extends "base.html" %}
+
+{%block content%}
+  <div class = "myContainer">
+    <div class = "navegation">
+      <button class = "btnWithIcon" onclick="location.href='{% url 'cadastroCentroAdocao' %}'" type="button">
+        <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="rgb(35, 57, 91)" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+          <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+        </svg>
+        <p>Cadastrar centro de doação</p>
+      </button>
+    </div>
+    {% comment %} <form method="GET" action="/busca" >{% csrf_token %}
+          <div>
+            <label for="busca">Busca: </label>
+            <input id="busca" type="text" name="busca">
+          </div>
+      <button type="submit" class="save btn btn-primary primary-color">Buscar</button>
+    </form> {% endcomment %}
+  </div>
+{% endblock %}
