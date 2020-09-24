@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% block title %}<title>My New Friend</title>{% endblock %}
+  {% block title %}<title>MyNewFriend</title>{% endblock %}
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="{% static 'css/global.css' %}">
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-  <link rel="stylesheet" href="{% static 'fa/css/all.min.css' %}">
+  {% comment %} <link rel="stylesheet" href="{% static 'css/all.min.css' %}"> {% endcomment %}
   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  {%block cabecalho%}{%endblock%}
 </head>
 <body class = "bkgColor">
     <header>

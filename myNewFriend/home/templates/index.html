@@ -1,22 +1,40 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% comment %} {%block cabecalho%}<link rel="stylesheet" href="{% static 'css/style.css' %}">{%endblock%} {% endcomment %}
 
 {%block content%}
   <div class = "myContainer">
     <div class = "navegation">
       <button class = "btnWithIcon" onclick="location.href='{% url 'cadastroCentroAdocao' %}'" type="button">
-        <svg width="1.7em" height="1.7em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="rgb(35, 57, 91)" xmlns="http://www.w3.org/2000/svg">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-box-arrow-in-right" fill="rgb(35, 57, 91)" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
           <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
         </svg>
         <p>Cadastrar centro de doação</p>
       </button>
     </div>
-    {% comment %} <form method="GET" action="/busca" >{% csrf_token %}
-          <div>
-            <label for="busca">Busca: </label>
-            <input id="busca" type="text" name="busca">
-          </div>
-      <button type="submit" class="save btn btn-primary primary-color">Buscar</button>
-    </form> {% endcomment %}
+    <div class = "mainContainer">
+      <div class = "lateralContainer">
+        <h2 class = "texto">Seu novo amigo pode estar pertinho de você !</h2>
+        <div class = "buscaArea">
+          <form method="GET" action="/busca" class = "busca">{% csrf_token %}
+                  <input id="busca" class="form-control" type="text" name="busca">
+            <button type="submit" class="btnBusca">
+              <div class = "srchIcon">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                </svg>
+              </div>
+              <p>Buscar</p>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class = "imgContainer">
+        <img class = "bkgImage" src ="{% static "assets/bkgHome.svg" %}">
+      </div>
+    </div>
   </div>
-{% endblock %}
+{% endblock %} 
