@@ -50,3 +50,12 @@ h1, h2, h3{
 .primary-color{
     color: rgb(35, 57, 91);
 }
+
+.primary-color-bkg{
+    background-color: rgb(35, 57, 91);
+}
+
+.navegation{
+    float: right;
+    margin-right: 1.5em;
+}

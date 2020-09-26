@@ -1,31 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  {% block title %}<title>My New Friend</title>{% endblock %}
-</head>
-<body>
-  <h2>Cadastro do centro de adoção pet</h2>
-  <form method="POST" action="novoCentroAdocao/" >{% csrf_token %}
-        <div>
-          <label for="nome">Nome: </label>
-          <input id="nome" type="text" name="nome">
-        </div>
-        <div>
-          <label for="email">Email: </label>
-          <input id="email" type="text" name="email">
-        </div>
-        <div>
-          <div>
-            <label for="cachorro">Cachorro: </label>
-            <input id="cachorro" type="checkbox" name="cachorro">
-            <label for="gato">Gato: </label>
-            <input id="gato" type="checkbox" name="gato">
-          </div>
-          <label for="quantidade">Quantos:</label>
-          <input id="quantidade" type="number" name="quantidade" min="1">
-        </div>
-       
-        <button type="submit" class="save btn btn-default">Save</button>
-  </form>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% comment %} {%block cabecalho%}<link rel="stylesheet" href="{% static 'css/style.css' %}">{%endblock%} {% endcomment %}
+
+{%block content%}
+  <div class = "myContainer">
+    <div class = "navegation">
+      <button class = "btnHome" onclick="location.href='{% url 'home' %}'" type="button">
+        <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="rgb(35, 57, 91)" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+          <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class = "formContainer">
+      <div class = "boxForm">
+        <h2>Cadastro do centro de adoção pet</h2>
+        <form method="POST" action="novoCentroAdocao/" enctype="multipart/form-data">{% csrf_token %}
+              
+              <div class = "form-group">
+                <label for="nome">Nome: </label>
+                <input  class="form-control" id="nome" type="text" name="nome">
+              </div>
+              
+              <div class = "form-group">
+                <label for="email">Email: </label>
+                <input  class="form-control" id="email" type="text" name="email">
+              </div>
+              
+              <div class="form-row">
+                <div class = "form-check form-check-inline">
+                  <input class="form-check-input" id="cachorro" type="checkbox" name="cachorro">
+                  <label class="form-check-label" for="cachorro">Cachorro</label>
+                </div>
+                <div class = "form-check form-check-inline">
+                  <input class="form-check-input" id="gato" type="checkbox" name="gato">
+                  <label class="form-check-label" for="gato">Gato</label>
+                </div>
+                <div class="col-md-3 mb-2">
+                  <input placeholder="Quantos" class="form-control" id="quantidade" type="number" name="quantidade" min="1">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">City</label>
+                  <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">State</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              
+              <div class="form-row">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="image">
+                  <label class="custom-file-label" for="image">Choose file</label>
+                </div>
+              </div>
+              
+              <button type="submit" class="save btn btn-lg btn-primary myBtn">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %} 

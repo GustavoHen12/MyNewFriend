@@ -15,6 +15,7 @@ class DadosCentroAdocao (models.Model):
     email = models.EmailField(("email"), max_length=254, default="invalido")
     gato = models.BooleanField(default=False)
     quantidade = models.PositiveSmallIntegerField(default=0)
+    img = models.ImageField(upload_to = "imagesData/", default="imagesData/erro.jpg") 
 
 # MODEL CENTRO DE ADOÇÃO:
 # nome

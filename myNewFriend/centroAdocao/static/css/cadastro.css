@@ -1,0 +1,42 @@
+.btnHome{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 5em;
+}
+
+.formContainer{
+    height: auto;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.boxForm{
+    background-color: rgb(233,233,233);
+    border: none;
+    border-radius: 20px;
+    margin-top: 3em;
+    padding: 2em 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+.boxForm h2{
+    font-weight: 700;
+    margin-bottom: 1.5em;
+}
+
+.myBtn{
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    margin-top: 3em;
+}
