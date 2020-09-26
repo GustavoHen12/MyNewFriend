@@ -20,57 +20,83 @@
         <form method="POST" action="novoCentroAdocao/" enctype="multipart/form-data">{% csrf_token %}
               
               <div class = "form-group">
-                <label for="nome">Nome: </label>
+                <label for="nome">Nome</label>
                 <input  class="form-control" id="nome" type="text" name="nome">
               </div>
               
               <div class = "form-group">
-                <label for="email">Email: </label>
+                <label for="email">Email</label>
                 <input  class="form-control" id="email" type="text" name="email">
               </div>
               
-              <div class="form-row">
-                <div class = "form-check form-check-inline">
-                  <input class="form-check-input" id="cachorro" type="checkbox" name="cachorro">
-                  <label class="form-check-label" for="cachorro">Cachorro</label>
-                </div>
-                <div class = "form-check form-check-inline">
-                  <input class="form-check-input" id="gato" type="checkbox" name="gato">
-                  <label class="form-check-label" for="gato">Gato</label>
-                </div>
-                <div class="col-md-3 mb-2">
-                  <input placeholder="Quantos" class="form-control" id="quantidade" type="number" name="quantidade" min="1">
-                </div>
+              {% comment %} <label>Cep:
+              <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                    onblur="pesquisacep(this.value);" /></label><br />
+              <label>Rua:
+              <input name="rua" type="text" id="rua" size="60" /></label><br />
+              <label>Bairro:
+              <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+              <label>Cidade:
+              <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+              <label>Estado:
+              <input name="uf" type="text" id="uf" size="2" /></label><br />
+               {% endcomment %}
+
+              <div class="form-group">
+                <label for="cep">Cep</label>
+                <input class="form-control" name="cep" type="text" id="cep" value=""
+                  onblur="pesquisacep(this.value);">
               </div>
 
               <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputCity">City</label>
-                  <input type="text" class="form-control" id="inputCity">
+                <div class="form-group col-md-5">
+                  <label for="rua">Rua</label>
+                  <input class="form-control" name="rua" type="text" id="rua">
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="Bairro">Bairro</label>
+                  <input class="form-control" name="bairro" type="text" id="bairro" >
+                </div> 
+              </div> 
+              <div class="form-row">
+                <div class="form-group col-md-2">
+                  <label for="estado">Estado</label>
+                  <input name="estado" id="estado" class="form-control">
                 </div>
                 <div class="form-group col-md-4">
-                  <label for="inputState">State</label>
-                  <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-2">
-                  <label for="inputZip">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <label for="cidade">Cidade</label>
+                  <input name="cidade" id="cidade" class="form-control">
                 </div>
               </div>
               
-              <div class="form-row">
+
+              <div class="form-group">              
+                  <div class = "form-check form-check-inline">
+                    <input class="form-check-input" id="cachorro" type="checkbox" name="cachorro">
+                    <label class="form-check-label" for="cachorro">Cachorro</label>
+                  </div>
+                  <div class = "form-check form-check-inline">
+                    <input class="form-check-input" id="gato" type="checkbox" name="gato">
+                    <label class="form-check-label" for="gato">Gato</label>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <input placeholder="Quantos" class="form-control" id="quantidade" type="number" name="quantidade" min="1">
+              </div>
+
+              <div class="form-group">
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="image">
-                  <label class="custom-file-label" for="image">Choose file</label>
+                  <input type="file" class="custom-file-input" id="image" name="image">
+                  <label class="custom-file-label" for="image">Imagem</label>
                 </div>
               </div>
-              
+
               <button type="submit" class="save btn btn-lg btn-primary myBtn">Save</button>
         </form>
       </div>
     </div>
   </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static 'js/getEnderecoCep.js' %}"></script>
 {% endblock %} 

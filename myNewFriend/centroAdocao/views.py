@@ -8,16 +8,10 @@ def cadastroCentroAdocao(request):
 def novoCentroAdocao(request):
     centro = DadosCentroAdocao()
 
-    # context = {} 
-    # if request.method == "POST": 
-    #     form = GeeksForm(request.POST, request.FILES) 
-    #     if form.is_valid(): 
-    #         name = form.cleaned_data.get("name") 
-    #         img = form.cleaned_data.get("geeks_field") 
-             
-    centro.img = request.POST['image']
+    centro.img = request.FILES['image']
     centro.nome = request.POST['nome']
     centro.email = request.POST['email']
+
     if(request.POST['cachorro'] == "on"):
         centro.cachorro = True
     else:
@@ -31,3 +25,10 @@ def novoCentroAdocao(request):
     centro.quantidade = request.POST['quantidade']
     centro.save()
     return render(request, 'concluido.html')
+
+    # context = {} 
+    # if request.method == "POST": 
+    #     form = GeeksForm(request.POST, request.FILES) 
+    #     if form.is_valid(): 
+    #         name = form.cleaned_data.get("name") 
+    #         img = form.cleaned_data.get("geeks_field") 
