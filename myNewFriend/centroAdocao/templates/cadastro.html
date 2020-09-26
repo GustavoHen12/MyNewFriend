@@ -28,19 +28,6 @@
                 <label for="email">Email</label>
                 <input  class="form-control" id="email" type="text" name="email">
               </div>
-              
-              {% comment %} <label>Cep:
-              <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-                    onblur="pesquisacep(this.value);" /></label><br />
-              <label>Rua:
-              <input name="rua" type="text" id="rua" size="60" /></label><br />
-              <label>Bairro:
-              <input name="bairro" type="text" id="bairro" size="40" /></label><br />
-              <label>Cidade:
-              <input name="cidade" type="text" id="cidade" size="40" /></label><br />
-              <label>Estado:
-              <input name="uf" type="text" id="uf" size="2" /></label><br />
-               {% endcomment %}
 
               <div class="form-group">
                 <label for="cep">Cep</label>
@@ -69,34 +56,53 @@
                 </div>
               </div>
               
-
-              <div class="form-group">              
-                  <div class = "form-check form-check-inline">
-                    <input class="form-check-input" id="cachorro" type="checkbox" name="cachorro">
-                    <label class="form-check-label" for="cachorro">Cachorro</label>
+            <div class = "formularioGrupo">
+              <div class="grupoIcon">              
+                  <div>
+                    <label class="customCheckbox" for="cachorro">
+                      <input id="cachorro" type="checkbox" name="cachorro">
+                      <div class = "checkmark">
+                        <image  class = "checkboxIcon" src = "{% static "assets/cachorroIcon.svg" %}">
+                      </div>
+                    </label>
                   </div>
-                  <div class = "form-check form-check-inline">
-                    <input class="form-check-input" id="gato" type="checkbox" name="gato">
-                    <label class="form-check-label" for="gato">Gato</label>
+                  <div>
+                    <label class="customCheckbox" for="gato">
+                      <input id="gato" type="checkbox" name="gato">
+                      <div class = "checkmark">
+                        <image  class = "checkboxIcon" src = "{% static "assets/gatoIcon.svg" %}">
+                      </div>
+                    </label>
                   </div>
               </div>
               <div class="form-group">
                   <input placeholder="Quantos" class="form-control" id="quantidade" type="number" name="quantidade" min="1">
               </div>
-
-              <div class="form-group">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="image" name="image">
-                  <label class="custom-file-label" for="image">Imagem</label>
-                </div>
+            </div>
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" aria-describedby="inputGroupFileAddon01"id="image" name="image">
+                <label class="custom-file-label" for="image">Imagem</label>
               </div>
-
-              <button type="submit" class="save btn btn-lg btn-primary myBtn">Save</button>
+            </div>
+            <div class = "btnContainer">
+              <button type="submit" class="save myBtn">Cadastrar</button>
+            </div>
         </form>
       </div>
     </div>
-  </div>
 
+
+    <div class="imgContainer">
+      <image class="bkgImage" src="{% static "assets/bkgCadastro.svg"%}">
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="{% static 'js/getEnderecoCep.js' %}"></script>
+  <script type="application/javascript">
+    $('input[type="file"]').change(function(e){
+        var fileName = e.target.files[0].name;
+        $('.custom-file-label').html(fileName);
+    });
+  </script>
 {% endblock %} 

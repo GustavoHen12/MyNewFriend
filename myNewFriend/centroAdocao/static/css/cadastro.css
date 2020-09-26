@@ -27,6 +27,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 5em;
+
+    -webkit-box-shadow: 24px 13px 51px -16px rgba(153,153,153,1);
+    -moz-box-shadow: 24px 13px 51px -16px rgba(153,153,153,1);
+    box-shadow: 24px 13px 51px -16px rgba(153,153,153,1);
 }
 
 .boxForm h2{
@@ -34,9 +38,103 @@
     margin-bottom: 1.5em;
 }
 
+.btnContainer, .imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
 .myBtn{
-    margin-left: auto;
-    margin-right: auto;
-    align-self: center;
     margin-top: 3em;
+    border: none;
+    padding: .5em 1.5em;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(35, 57, 91);
+
+    font-size: 15pt;
+    font-weight: 500;
+}
+
+.myBtn:hover{
+    background-color: rgb(90, 138, 211);
+}
+
+.formularioGrupo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+/* CHECKBOX */
+.grupoIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 1em;
+    margin-right: 1em;
+}
+.customCheckbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 5em;
+    width: 5em;
+    color: white;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkmark{
+    height: 5em;
+    width: 5em;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(35, 57, 91);
+    -webkit-box-shadow: 0px 0px 51px -16px rgba(38,49,66,1);
+    -moz-box-shadow: 0px 0px 51px -16px rgba(38,49,66,1);
+    box-shadow: 0px 0px 51px -16px rgba(38,49,66,1);
+
+}
+
+.customCheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkboxIcon{
+    height: 2.7em;
+    width: auto;
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+}
+.customCheckbox:hover input ~ .checkmark{
+    background-color: rgb(85, 126, 187);
+}
+  
+.customCheckbox input:checked ~ .checkmark {
+    background-color: rgb(124, 161, 218);
+    -webkit-box-shadow: 0px 0px 47px 2px rgba(88,124,179,1);
+    -moz-box-shadow: 0px 0px 47px 2px rgba(88,124,179,1);
+    box-shadow: 0px 0px 47px 2px rgba(88,124,179,1);    
+} 
+
+.bkgImage{
+    height: 2.5em;
+    width: auto;
+    margin: 5em;
 }
