@@ -57,7 +57,7 @@
     padding-top: 5em;
 }
 .btnBusca{
-    margin-top: 5em;
+    margin-top: 3em;
     display: flex;
     
     flex-direction: row;
@@ -83,4 +83,9 @@
 
 .btnBusca:hover{
     background-color: rgb(81, 103, 136);
+}
+
+.inputArea{
+    height: auto;
+    width: 100%;
 }
