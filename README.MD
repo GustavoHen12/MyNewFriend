@@ -2,11 +2,10 @@
 
 Este projeto foi inspirado na 1° Next Level Week 2020. Porém, ao invés de React, eu construí ele utilizando Django, e no banco de dados, é utilizado PostgreSQL.
 
-## A ideia
-
 A ideia desse projeto é ter um espaço onde pessoas que estão procurando adotar um novo amigo, podem se conectar as pessoas que estão realizando a doação. Portanto, os indivíduos que estão realizando a doação, podem facilmente preencher o cadastro, contendo as informações mais importantes, e aqueles que procuram adotar um pet, em sua cidade, poderão encontrá-los.
 
 ## Telas
+
 ### Home
 ![Home](images/img1.png)
 
