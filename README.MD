@@ -1,6 +1,6 @@
 # MyNewFriend :cat: :dog:
 
-Este projeto foi inspirado na 1° Next Level Week 2020. Porém, ao invés de utilizar React, eu tive como objetivo estudar Django; portanto ele foi inteiramente contruido utilizando esta tecnológia. E, no banco de dados, é utilizado PostgreSQL.
+Este projeto foi inspirado na 1° Next Level Week 2020. Porém, ao invés de React, eu construí ele utilizando Django, e no banco de dados, é utilizado PostgreSQL.
 
 ## A ideia
 
