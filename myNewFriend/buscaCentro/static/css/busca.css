@@ -1,0 +1,93 @@
+.cabecalhoInfo{
+    width: 100%;
+    height: auto;
+    padding-top: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.info{
+    font-weight: 700;
+    font-size: 15pt;
+}
+
+.total{
+    font-weight: 500;
+    font-size: 12pt;
+}
+
+.resultContainer{
+    width: 100%;
+    height: 66vh;
+    background-color: rgb(233, 233, 233);
+}
+
+.resultWrap{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.itemContainer{
+    margin-top: 2.5em;
+    margin-left: 3.5em;
+
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+
+    height: 18em;
+    width: 15em;
+
+    -webkit-box-shadow: 6px 9px 39px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 9px 39px -12px rgba(0,0,0,0.75);
+    box-shadow: 6px 9px 39px -12px rgba(0,0,0,0.75);
+    
+}
+
+.itemImgContainer{
+    width: 100%;
+    height: 8em;
+    object-fit: cover;
+    overflow: hidden;
+}
+.itemImg{
+    min-width: 100%;
+    max-width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.dadosItemCnt p {
+    margin: 0;
+    padding: 0;
+}
+.dadosItemCnt{
+    margin-left: .5em;
+}
+.animaisCnt{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: .5em;
+}
+
+.dadositemTxt{
+    font-weight: 400;
+    font-size: 12pt;
+}
+
+.itemIcon{
+    height: 1.5em;
+    width: auto;
+    margin-right: .8em;
+}
+
+.itemNome{
+    margin-top: .5em;
+    margin-left: .5em;
+    font-weight: 700;
+    font-size: 13pt;
+}
+

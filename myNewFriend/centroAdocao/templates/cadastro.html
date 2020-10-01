@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% comment %} {%block cabecalho%}<link rel="stylesheet" href="{% static 'css/style.css' %}">{%endblock%} {% endcomment %}
-
 {%block content%}
   <div class = "myContainer">
     <div class = "navegation">
@@ -34,15 +32,20 @@
                 <input class="form-control" name="cep" type="text" id="cep" value=""
                   onblur="pesquisacep(this.value);">
               </div>
+              
+              <div class="form-group">
+                <label for="rua">Rua</label>
+                <input class="form-control" name="rua" type="text" id="rua">
+              </div>
 
               <div class="form-row">
                 <div class="form-group col-md-5">
-                  <label for="rua">Rua</label>
-                  <input class="form-control" name="rua" type="text" id="rua">
-                </div>
-                <div class="form-group col-md-3">
                   <label for="Bairro">Bairro</label>
                   <input class="form-control" name="bairro" type="text" id="bairro" >
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="numero">Número</label>
+                  <input class="form-control" name="numero" type="text" id="numero" >
                 </div> 
               </div> 
               <div class="form-row">
@@ -50,7 +53,7 @@
                   <label for="estado">Estado</label>
                   <input name="estado" id="estado" class="form-control">
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-5">
                   <label for="cidade">Cidade</label>
                   <input name="cidade" id="cidade" class="form-control">
                 </div>
@@ -60,7 +63,8 @@
               <div class="grupoIcon">              
                   <div>
                     <label class="customCheckbox" for="cachorro">
-                      <input id="cachorro" type="checkbox" name="cachorro">
+                      <input type="hidden" name="cachorro" value="0" /> 
+                      <input id="cachorro" type="checkbox" name="cachorro" value="1">
                       <div class = "checkmark">
                         <image  class = "checkboxIcon" src = "{% static "assets/cachorroIcon.svg" %}">
                       </div>
@@ -68,7 +72,8 @@
                   </div>
                   <div>
                     <label class="customCheckbox" for="gato">
-                      <input id="gato" type="checkbox" name="gato">
+                      <input type="hidden" name="gato" value="0"/>
+                      <input id="gato" type="checkbox" name="gato" value="1">
                       <div class = "checkmark">
                         <image  class = "checkboxIcon" src = "{% static "assets/gatoIcon.svg" %}">
                       </div>

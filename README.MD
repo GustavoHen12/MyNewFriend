@@ -2,6 +2,10 @@
 
 Projeto baseado na Next Level Week 2020
 
+- [form](https://simpleisbetterthancomplex.com/article/2017/08/19/how-to-render-django-form-manually.html)
+
+- [form/ajax](https://realpython.com/django-and-ajax-form-submissions/)
+
 - [Prototipo](https://www.figma.com/file/wEQ9tApiKU7VS8SLegZXMg/MyNewFriend?node-id=0%3A1)
 
 Links que podem ser uteis futuramente
